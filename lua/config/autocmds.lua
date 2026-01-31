@@ -12,4 +12,4 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 --Disable Copilot on startup
--- vim.cmd("Copilot disable")
+vim.cmd("Copilot disable")

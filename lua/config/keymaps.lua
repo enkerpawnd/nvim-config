@@ -5,7 +5,9 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
-keymap.set("n", "<leader>sx", require("telescope.builtin").resume, { noremap = true, silent = true, desc = "Resume" })
+keymap.set("n", "<leader>sx", function()
+  require("telescope.builtin").resume()
+end, { desc = "Resume" })
 
 --Increment/Decrement
 keymap.set("n", "+", "<C-a>")
@@ -42,12 +44,12 @@ keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
 --Diagnostics
-keymap.set("n", "<C-j>", function()
-  vim.diagnostic.goto_next()
-end, opts)
+-- keymap.set("n", "<C-j>", function()
+--   vim.diagnostic.goto_next()
+-- end, opts)
 
---ToggleTerminal
-keymap.set("n", "<C-t>", ":ToggleTerm<Return>")
+--Toggle Terminal
+-- press <C-_>
 
 --Indent lines using tab
 keymap.set("v", "<tab>", ">")
