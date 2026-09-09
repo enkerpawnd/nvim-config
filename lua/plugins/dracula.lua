@@ -8,7 +8,6 @@ return {
       local dracula = require("dracula")
 
       dracula.setup({
-        transparent = true,
         on_colors = function(colors, color)
           ---@type dracula.palette
           return {
